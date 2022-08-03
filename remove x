@@ -1,0 +1,13 @@
+def removeX(string):
+    count = string.count('x')
+    string = list(string)
+    while count :
+        string.remove('x')
+        count -=1
+        
+    string = ''.join(string)
+    return string
+
+# Main
+string = input()
+print(removeX(string))
