@@ -1,0 +1,11 @@
+def getDigitSum(num):
+    if num == 0:
+        return num
+    else:
+        return num%10 + getDigitSum(num//10)
+    
+num = int(input())
+
+sum = getDigitSum(num)
+
+print(sum)
