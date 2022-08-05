@@ -1,0 +1,13 @@
+def pair_star(str):
+    l=len(str)
+    if l==0 or l==1:
+        return str
+    if str[0]==str[1]:
+        return str[0]+"*"+pair_star(str[1:])
+    else:
+        return str[0]+pair_star(str[1:])
+
+
+
+s=input()
+print(pair_star(s))
