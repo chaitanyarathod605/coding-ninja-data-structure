@@ -1,0 +1,26 @@
+def checkAB(s):
+    l = len(s)
+    if l == 0 or (l==1 and s[0]=='a') or (l==3 and s[1]=='b' and s[2] == 'b' ):
+        return 'true'
+    
+    if s[0] == 'a':
+        if s[1] == 'a':
+            return checkAB(s[1:])
+        
+        elif s[1] == 'b' and s[2] == 'b':
+            return checkAB(s[2:])
+        
+        else:
+            return 'false'
+        
+    elif s[0] == 'b':
+        if (s[1] == 'a'):
+            return checkAB(s[1:])
+        
+        else:
+            return 'false'
+    
+
+
+string = input()
+print(checkAB(string))
